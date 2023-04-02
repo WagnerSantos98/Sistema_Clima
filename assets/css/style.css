@@ -8,6 +8,7 @@
     --input-text: #495057;
     --divider: #e9ecef;
     --main-color: #1a1a1a;
+    --main-backgroud: #f6f6f8;
     --card-color: #c2c2c2;
 }
 
@@ -54,6 +55,7 @@ img{
     justify-content: space-between;
 }
 
+/*Input de pesquisa*/
 .search{
     display: flex;
     align-items: center;
@@ -176,4 +178,150 @@ img{
 
 .location{
     display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*Main - Destque de todas as informações*/
+.main{
+    width: 100%;
+    min-width: 400px;
+    padding: 20px 40px;
+    background-color: var(--main-backgroud);
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.main nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mains nav .options{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.main nav .options button{
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--input-text);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.main nav .options button.active{
+    color: var(--primary-color);
+}
+
+.main nav .units button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+.main nav .units button.active{
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+/*Cards - informações relacionadas a indici uv, velocidade do vento, humidade, etc.*/
+.main .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.cards .card {
+  width: 100px;
+  height: 130px;
+  border-radius: 20px;
+  color: #1a1a1a;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card .card-icon{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card .day-temp{
+    font-size: 12px;
+    display: flex;
+    justify-content:center;
+    display: flex; 
+}
+
+.highlights{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.highlights .heading{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card2{
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card2 .card-heading{
+    color: var(--card-color);
+}
+
+.card2 .content{
+    margin-top: 20px;
+}
+
+.card2 .content p:first-child{
+    text-align: center;
+    font-size: 30px;
+}
+
+.card2 .content p:nth-child(2){
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/*Créditos*/
+.credits{
+    text-align: center;
+    font-size: 12px;
+    color: var(--card-color);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
