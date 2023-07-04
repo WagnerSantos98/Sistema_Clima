@@ -373,6 +373,7 @@ search.addEventListener("keydown", function (e) {
     }
   }
 });
+
 function addActive(x) {
   if (!x) return false;
   removeActive(x);
